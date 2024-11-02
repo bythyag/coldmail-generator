@@ -1,4 +1,4 @@
-# Academic Cold Email Generator
+# ColdMailGPT
 
 An automated tool for sending personalized cold emails to professors for research positions. This tool uses OpenAI's GPT to generate customized emails based on your profile and each professor's research interests.
 
