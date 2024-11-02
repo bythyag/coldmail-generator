@@ -164,4 +164,4 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 This tool is for educational purposes only. Be sure to follow all applicable institutional policies and email regulations when sending cold emails.
 
 ---
-Made with ❤️ by [Your Name]
+Made with ❤️ by Thyag Raj
