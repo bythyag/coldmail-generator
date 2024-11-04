@@ -31,15 +31,16 @@ A Python-based tool for automating personalized cold emails to professors or pro
    ```
 
 3. **Set Up Variables**
+   ```
    SENDER_EMAIL=your-email@gmail.com
    GMAIL_APP_PASSWORD=your-app-specific-password
    OPENAI_API_KEY=your-openai-api-key
    ```
 
-4. **Configure User and Paths**
+5. **Configure User and Paths**
    Customize your details (e.g., name, degree, research interests) in the `user_details` dictionary and provide the path to the Excel file with professor details and your CV file (optional).
 
-5. **Run the Script**
+6. **Run the Script**
    ```bash
    python cold_email_generator.py
    ```
