@@ -52,7 +52,6 @@ To execute the email generation and sending process, fill in the professor detai
 ## File Structure
 
 - `cold_email_generator.py`: Main script with the `ColdEmailGenerator` class.
-- `.env`: Environment variables file for sensitive credentials.
 - `README.md`: Project documentation.
 
 ## License
