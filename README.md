@@ -30,9 +30,7 @@ A Python-based tool for automating personalized cold emails to professors or pro
    pip install -r requirements.txt
    ```
 
-3. **Set Up Environment Variables**
-   Create a `.env` file in the root directory with the following variables:
-   ```plaintext
+3. **Set Up Variables**
    SENDER_EMAIL=your-email@gmail.com
    GMAIL_APP_PASSWORD=your-app-specific-password
    OPENAI_API_KEY=your-openai-api-key
