@@ -7,58 +7,112 @@ from openai import OpenAI
 from tqdm import tqdm
 import time
 import pandas as pd
-from typing import Optional
-from dotenv import load_dotenv
 
-# Load environment variables
-load_dotenv()
+# Configuration
+EMAIL = "your.email@gmail.com"
+APP_PASSWORD = "your_app_password"  # Gmail App Password
+OPENAI_API_KEY = "your_openai_api_key"
 
-class ColdEmailGenerator:
-    def __init__(self):
-        """
-        Initialize the cold email generator with credentials from environment variables.
-        Required environment variables:
-        - SENDER_EMAIL: Gmail address to send emails from
-        - GMAIL_APP_PASSWORD: Gmail app-specific password
-        - OPENAI_API_KEY: OpenAI API key
-        """
-        self.email = os.getenv('SENDER_EMAIL')
-        self.app_password = os.getenv('GMAIL_APP_PASSWORD')
-        self.client = OpenAI(api_key=os.getenv('OPENAI_API_KEY'))
+# File paths
+EXCEL_PATH = "path/to/your/professors_list.xlsx"
+CV_PATH = "path/to/your/cv.pdf"
+
+# Email settings
+DELAY_BETWEEN_EMAILS = 3  # seconds
+EMAIL_SUBJECT = "Application for Research Assistant or Visiting Student Position"
+
+client = OpenAI(api_key=OPENAI_API_KEY)
+
+class coldmail:
+    def __init__(self, professor_name, university, email, research_interests, attachment_path):
+        message_text = self.generate_email(professor_name, university, research_interests)
         
-        if not all([self.email, self.app_password, self.client.api_key]):
-            raise ValueError("Missing required environment variables. Please check your .env file.")
+        msg = MIMEMultipart()
+        msg['From'] = EMAIL
+        msg['To'] = email
+        msg['Subject'] = EMAIL_SUBJECT
 
-    # Rest of the class implementation remains the same...
-    # [Previous methods remain unchanged]
+        msg.attach(MIMEText(message_text, 'plain'))
+
+        if attachment_path and os.path.exists(attachment_path):
+            with open(attachment_path, 'rb') as f:
+                filename = os.path.basename(attachment_path)
+                part = MIMEApplication(f.read(), Name=filename)
+                part['Content-Disposition'] = f'attachment; filename="{filename}"'
+                msg.attach(part)
+        
+        self.email_message = msg.as_string()
+        self.recipient = email
+        self.send_mail()
+
+    def generate_email(self, professor_name, university, research_interests):
+        completion = client.chat.completions.create(
+            model="gpt-4",  # Updated to standard model name
+            messages=[
+                {"role": "system", "content": """
+                You are a cold email writer for Research Assistant or Visiting Researcher positions. 
+                Write a professional email with the following structure:
+
+                1. Introduction paragraph with student background
+                2. Research experience in bullet points
+                3. Technical skills paragraph
+                4. Closing paragraph expressing interest in the lab
+
+                Guidelines:
+                - Keep it under 200 words
+                - Be professional and courteous
+                - Personalize to the professor's research
+                - Avoid overly promotional language
+                - Include relevant technical background
+                - Make clear connection between student's interests and professor's work
+                """},
+                {
+                    "role": "user",
+                    "content": f"The Professor's name is {professor_name} from {university}. Their research interests are {research_interests}."
+                }
+            ]
+        )
+        
+        return completion.choices[0].message.content
+
+    def send_mail(self):
+        try:
+            server.sendmail(EMAIL, self.recipient, self.email_message)
+            print(f"Email sent successfully to {self.recipient}")
+        except Exception as e:
+            print(f"Failed to send email to {self.recipient}: {str(e)}")
 
 if __name__ == "__main__":
-    # User details
-    user_details = {
-        "name": "Your Name",
-        "degree": "B.Tech/M.Tech/etc",
-        "university": "Your University",
-        "research_interests": "Your research interests",
-        "experience": """
-        • Project/Research Experience 1
-        • Project/Research Experience 2
-        • Relevant coursework or thesis
-        """
-    }
-    
-    # Paths configuration
-    paths = {
-        "excel_file": "path/to/professors_list.xlsx",
-        "cv_file": "path/to/your/cv.pdf"  # Optional
-    }
-    
-    # Initialize email generator
-    email_generator = ColdEmailGenerator()
-    
-    # Process and send emails
-    process_professors_list(
-        paths["excel_file"],
-        email_generator,
-        user_details,
-        paths["cv_file"]
-    )
+    try:
+        # Read the Excel file
+        df = pd.read_excel(EXCEL_PATH)
+        
+        # Connect to email server
+        server = smtplib.SMTP_SSL('smtp.gmail.com', 465)
+        server.login(EMAIL, APP_PASSWORD)
+        print("Successfully logged in!")
+
+        # Convert DataFrame rows to list of dictionaries
+        professor_list = df.to_dict('records')
+
+        # Send emails
+        for professor in tqdm(professor_list, desc="Sending emails", unit="email"):
+            # Skip if email contains "NaN" or research interests are NaN
+            if pd.isna(professor['email']) or pd.isna(professor['research_interests']):
+                print(f"Skipping {professor['name']} due to missing data")
+                continue
+                
+            coldmail(
+                professor["name"],
+                professor["university"],
+                professor["email"],
+                professor["research_interests"],
+                CV_PATH
+            )
+            time.sleep(DELAY_BETWEEN_EMAILS)
+
+    except Exception as e:
+        print(f"An error occurred: {str(e)}")
+    finally:
+        if 'server' in locals():
+            server.quit()
