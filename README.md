@@ -1,9 +1,9 @@
-## Cold Mail Generator
+## cold mail generator
 
-### Overview
-The Cold Mail Generator is a Python application designed to automate the process of sending personalized cold emails to professors. It utilizes advanced language models to generate email content based on provided prompts and professor details. The application is structured in a modular way, allowing for easy maintenance and extension.
+### overview  
+the cold mail generator is a python application designed to automate the process of sending personalized cold emails to professors. it utilizes advanced language models to generate email content based on provided prompts and professor details. the application is structured in a modular way, allowing for easy maintenance and extension.
 
-### Project Structure
+### project structure
 ```
 coldmail-generator
 ├── src
@@ -19,44 +19,48 @@ coldmail-generator
 │   ├── system_prompt.txt
 │   └── user_prompt_template.txt
 ├── mailing list
-│   └── mailinglist-2 - Sheet1.csv
+│   └── mailinglist-2 - sheet1.csv
 ├── cv-pdf
-│   └── Thyag_Raj_CV.pdf
+│   └── thyag_raj_cv.pdf
 ├── cv-texts
-│   └── Thyag_Raj_CV_extracted.txt
+│   └── thyag_raj_cv_extracted.txt
 ├── requirements.txt
-└── README.md
+└── readme.md
 ```
 
-### Features
-- **Email Generation**: Generates personalized emails using language models from Google Gemini and OpenAI.
-- **Data Loading**: Loads professor data from CSV files and context from text files.
-- **Email Sending**: Connects to an SMTP server to send emails with attachments.
-- **Configuration Management**: Loads and validates configuration values from environment variables.
+### features
+- **email generation**: generates personalized emails using language models from google gemini and openai.  
+- **data loading**: loads professor data from csv files and context from text files.  
+- **email sending**: connects to an smtp server to send emails with attachments.  
+- **configuration management**: loads and validates configuration values from environment variables.
 
-### Installation
-1. Clone the repository:
+### installation
+1. clone the repository:
    ```
    git clone <repository-url>
    cd coldmail-generator
    ```
-2. Install the required dependencies:
+2. install the required dependencies:
    ```
    pip install -r requirements.txt
    ```
 
-### Usage
-1. Set up your environment variables in a `.env` file:
+### usage
+1. set up your environment variables in a `.env` file:
    ```
    GEMINI_API_KEY=<your-gemini-api-key>
    OPENAI_API_KEY=<your-openai-api-key>
    EMAIL_ADDRESS=<your-email-address>
    EMAIL_PASSWORD=<your-email-password>
    ```
-2. Run the application:
+2. run the application:
    ```
    python main.py
    ```
 
-## Contributing
-Contributions are welcome! Please open an issue or submit a pull request for any improvements or bug fixes.
+## contributing
+contributions are welcome! please open an issue or submit a pull request for any improvements or bug fixes.
+
+---
+
+Let me know if you want this version saved to a file or formatted for a specific platform like GitHub.
