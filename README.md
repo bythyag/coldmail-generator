@@ -1,9 +1,9 @@
-# Cold Mail Generator
+## Cold Mail Generator
 
-## Overview
+### Overview
 The Cold Mail Generator is a Python application designed to automate the process of sending personalized cold emails to professors. It utilizes advanced language models to generate email content based on provided prompts and professor details. The application is structured in a modular way, allowing for easy maintenance and extension.
 
-## Project Structure
+### Project Structure
 ```
 coldmail-generator
 ├── src
@@ -28,13 +28,13 @@ coldmail-generator
 └── README.md
 ```
 
-## Features
+### Features
 - **Email Generation**: Generates personalized emails using language models from Google Gemini and OpenAI.
 - **Data Loading**: Loads professor data from CSV files and context from text files.
 - **Email Sending**: Connects to an SMTP server to send emails with attachments.
 - **Configuration Management**: Loads and validates configuration values from environment variables.
 
-## Installation
+### Installation
 1. Clone the repository:
    ```
    git clone <repository-url>
@@ -45,7 +45,7 @@ coldmail-generator
    pip install -r requirements.txt
    ```
 
-## Usage
+### Usage
 1. Set up your environment variables in a `.env` file:
    ```
    GEMINI_API_KEY=<your-gemini-api-key>
@@ -60,6 +60,3 @@ coldmail-generator
 
 ## Contributing
 Contributions are welcome! Please open an issue or submit a pull request for any improvements or bug fixes.
-
-## License
-This project is licensed under the MIT License. See the LICENSE file for details.
