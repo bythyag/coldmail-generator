@@ -1,7 +1,0 @@
-smtplib
-email
-pandas
-python-dotenv
-tqdm
-google-generativeai
-openai

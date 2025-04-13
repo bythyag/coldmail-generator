@@ -1,0 +1,98 @@
+# Expert Cold Email Generator for Research Positions
+
+## Task
+Create personalized, concise cold emails for research/academic positions based on:
+- The student's background (CV/resume):
+--- START CV CONTEXT ---
+{cv_text}
+--- END CV CONTEXT ---
+- The professor's research interests: {research_interests}
+- Professor's Name: {professor_name}
+- Professor's University: {university}
+
+## Few-Shot Examples
+
+### Example 1: Archaeology Research Position
+
+**Input:**
+Student: First-year graduate student in archaeology interested in cultural artifacts and snake phobia research
+Professor: Dr. Jones - Published paper on reptiles in antiquities retrieval with focus on psychosomatic aversion to snakes
+
+**Output:**
+```
+Dr. Jones,
+
+My name is Myra Smith and I'm a first-year graduate student in the archaeology program.
+
+I was intrigued by your paper on the contravening impact of reptiles in the antiquities retrieval process. The section on the psychosomatic aspects of an archaeologist's anathema toward snakes was particularly compelling and inspired; I cited it in my graduate thesis on the intersection of biology and archaeology.
+
+As an aspiring swashbuckling archeologist with an academic specialization on mythical religious antiquities and invertebrate avoidance, I would appreciate an opportunity to talk with you about joining your research group for the upcoming year (and beyond).
+
+My resume is attached and I am available for a chat in person, on Zoom, or over the phone. Please let me know if we can schedule a time.
+
+Regards,
+Myra Smith
+```
+
+### Example 2: Business Networking Outreach
+
+**Input:**
+Student: Junior at UC Berkeley studying business administration with consulting experience
+Contact: Professional working at Disney's CSBD team
+
+**Output:**
+```
+Hello
+
+My name is Rohan Punamia and I am a junior at UC Berkeley studying business administration. I noticed you work in Disney's CSBD team and would love to learn more about your experience there!
+
+While at Berkeley, I developed an interest in the consulting and strategy industry through my involvement in consulting organizations and internship experiences.
+
+Do you have any time to schedule a call?
+
+Also, I've attached my resume below - please let me know if you have any questions!
+
+Sincerely,
+Rohan Punamia
+```
+
+## Email Structure Guidelines
+1. **Subject line:** Clear indication of purpose (e.g., Application for Research Assistant Position)
+2. **Opening:** Brief student introduction (use CV context). Address the professor formally (Dear Professor {professor_name}).
+3. **Connection paragraph:** Specifically reference the professor's work ({research_interests}) and how it connects to the student's background/skills (from CV context).
+4. **Value proposition:** Express what the student brings to their team/research (implied through connection).
+5. **Call to action:** Request for meeting/discussion. Mention CV is attached.
+6. **Closing:** Professional sign-off (e.g., Sincerely, Regards).
+
+## Key Principles
+- Keep under 200 words total.
+- Demonstrate specific knowledge of the recipient's work ({research_interests}).
+- Make clear connections between the student's experience (CV context) and the professor's needs/research.
+- Be authentic and straightforward.
+- Include only relevant details from the CV.
+- Use confident but respectful tone.
+
+## Writing Principles
+
+- Be warm, thoughtful, and genuine without being overly formal or stiff
+- Use natural, conversational language that flows well and feels authentic
+- Balance confidence with humility and respect
+- Be specific and substantive rather than vague or generic
+- Focus on quality over quantity - aim for concise but meaningful content
+- Show genuine intellectual curiosity about the professor's work
+- Find a meaningful connection between the student's background and the professor's research
+- Use varied sentence structures with a mix of simple and complex sentences
+- Avoid overused phrases and clichés common in professional emails
+- Maintain a positive, forward-looking tone
+- Keep total length under 200 words while ensuring all key points are covered
+
+## Tone Guidance
+
+- Intellectual but accessible
+- Respectful without being deferential
+- Confident without being presumptuous
+- Enthusiastic without being overeager
+- Precise without being overly technical
+- Warm without being casual
+
+Generate only the body of the email based on the provided CV context and professor details, following the structure and principles outlined above. Start directly with "Dear Professor {professor_name}".
