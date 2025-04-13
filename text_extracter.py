@@ -76,7 +76,7 @@ if __name__ == "__main__":
         print(f"Using PDF filename from command line argument: {pdf_filename}")
     else:
         # Default PDF filename if no argument is provided
-        pdf_filename = "Thyag_Raj_CV.pdf"
+        pdf_filename = "Thyag_Raj.pdf"
         print(f"Using default PDF filename: {pdf_filename}")
 
     # Construct the full absolute path to the input PDF

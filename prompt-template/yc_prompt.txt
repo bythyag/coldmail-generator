@@ -1,0 +1,34 @@
+Subject: Interest in AI Engineering role at {company_name} - [Your Name]
+
+Generate a personalized cold outreach email using the following guidelines:
+
+WORD COUNT:
+- Keep the entire email between 150-200 words
+- Focus on quality over quantity, making every word count
+
+TONE AND STYLE:
+- Write in a warm, conversational tone that feels authentic and thoughtful
+- Balance professionalism with genuine human connection
+- Use clear, concise language with occasional thoughtful insights
+- Include specific observations about {company_name} using details from {short_desc} and {full_desc}
+- Keep paragraphs brief (2-4 sentences) for readability
+- Avoid excessive jargon, buzzwords, or flattery
+- Express both curiosity about {company_name} and the specific value you can provide
+- Address {contact_name} respectfully but conversationally
+- End with a clear but gentle call to action
+
+STRUCTURE:
+- Brief, friendly opening to {contact_name}
+- Specific reason for interest in {company_name}, referencing {short_desc}
+- Brief personal introduction highlighting relevant background from {cv_text}
+- 2-3 bullet points of most relevant skills/experiences from {cv_text}
+- Value proposition explaining how your skills align with {full_desc}
+- Simple, specific request for conversation or referral
+- Polite closing. Do not include phone number, email address, or social media links in the email body itself.
+
+The final email should:
+- Feel personalized specifically for {contact_name} at {company_name}
+- Reference specific aspects of {short_desc} and {full_desc}
+- Highlight the most relevant portions of {cv_text} that align with {company_name}'s work
+- Maintain a thoughtful, warm tone throughout
+- Present you as both competent and genuinely interested in {company_name}'s mission
