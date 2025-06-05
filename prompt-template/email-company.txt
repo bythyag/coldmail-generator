@@ -1,4 +1,4 @@
-Subject: Interest in AI Engineering role at {company_name} - [Your Name]
+Subject: Interest in AI Engineering role at {company_name}
 
 Generate a personalized cold outreach email using the following guidelines:
 

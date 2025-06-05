@@ -1,0 +1,82 @@
+# Instructions for Personalized Academic Outreach Email Generator for Research Positions
+
+## Objective
+Generate authentic, compelling cold emails for research and academic opportunities tailored to the academic landscape. Each email should establish genuine connections between the student's background and the recipient's work while maintaining cultural appropriateness and professional warmth.
+
+## Template Variables
+- Student's academic and professional background: {cv_text}
+- Professor's research focus and recent work: {research_interests}
+- Professor's Name: {professor_name}
+- Institution: {university}
+
+## Contextual Examples for Indian Academic Environment
+
+### Example 1: Engineering Research Position
+
+**Context:**
+Student: Final year B.Tech student in Computer Science from NIT with internship experience at a fintech startup and interest in machine learning applications
+Professor: Dr. Sharma at IIT Delhi - Research focus on AI applications in financial inclusion and rural banking solutions
+
+**Generated Email:**
+```
+Dear Professor Sharma,
+
+I am Priya Nair, a final year B.Tech student in Computer Science at NIT Calicut. Your recent work on leveraging artificial intelligence for financial inclusion in rural communities resonates deeply with my academic interests and professional aspirations.
+
+During my internship at PayTech Solutions, I witnessed firsthand the challenges of extending digital financial services to underserved populations. Your paper on adaptive machine learning models for credit assessment in rural banking particularly caught my attention, as it addresses the exact problems I observed during my fieldwork in Kerala's remote villages.
+
+My academic projects have focused on developing scalable ML solutions for social impact, including a recommendation system for microfinance institutions that I presented at the national student research conference. I believe my technical background combined with my genuine interest in technology for social good would allow me to contribute meaningfully to your research group.
+
+I would be honored to discuss potential research opportunities with you, either as a project student or for future graduate studies. I have attached my resume for your consideration and would be grateful for any guidance you might offer.
+
+With sincere regards,
+Priya Nair
+```
+
+### Example 2: Social Sciences Research Collaboration
+
+**Context:**
+Student: M.A. student in Sociology from JNU with research experience in urban migration patterns and gender studies
+Contact: Dr. Patel at Tata Institute - Specializes in labor migration and women's economic participation in Indian cities
+
+**Generated Email:**
+```
+Dear Dr. Patel,
+
+I am Arjun Verma, currently pursuing my M.A. in Sociology at Jawaharlal Nehru University. Your comprehensive research on women's economic participation in India's rapid urbanization process has been instrumental in shaping my understanding of contemporary social transformation.
+
+Your recent publication on the intersection of internal migration and women's workforce participation particularly resonates with my thesis work on changing family structures in Delhi's migrant communities. The methodological framework you developed for tracking economic empowerment across different migration patterns has influenced my own research approach significantly.
+
+Through my fieldwork in South Delhi's urban villages, I have been documenting similar phenomena that align closely with your theoretical contributions. My background in both quantitative survey methods and ethnographic research, combined with fluency in Hindi and Bengali, has enabled me to gather nuanced data from diverse migrant populations.
+
+I would be deeply grateful for an opportunity to discuss my research findings with you and explore possibilities for collaboration or mentorship. Your insights would be invaluable as I prepare for doctoral studies in this field.
+
+I have attached my academic profile and recent conference presentation for your reference.
+
+Respectfully yours,
+Arjun Verma
+```
+
+## Email Architecture Framework
+
+**Opening Section:** Establish personal identity and institutional affiliation using information from CV context. Address the recipient with appropriate cultural respect (Dear Professor/Dr. {professor_name}).
+
+**Connection Building:** Demonstrate specific familiarity with the recipient's work ({research_interests}) and articulate how it connects to personal academic journey or professional experiences drawn from CV background.
+
+**Value Articulation:** Present relevant skills, experiences, or perspectives from CV context that would contribute to the recipient's research agenda without being presumptuous.
+
+**Professional Request:** Express genuine interest in learning from or collaborating with the recipient. Mention attached CV and suggest flexible meeting arrangements.
+
+**Respectful Closure:** Use culturally appropriate sign-off reflecting Indian academic courtesy (Respectfully yours, With sincere regards, etc.).
+
+## Core Writing Principles
+
+The email should convey genuine intellectual curiosity and personal connection to the research area. Write with warmth and authenticity while maintaining professional boundaries appropriate for Indian academic hierarchies. Demonstrate specific knowledge of the recipient's work rather than using generic praise. Create meaningful bridges between the student's background and the professor's research interests.
+
+Use natural, flowing language that feels conversational yet respectful. Avoid overly formal or stilted expressions while maintaining appropriate academic decorum. Show enthusiasm through specific examples and personal insights rather than excessive adjectives or emotional language.
+
+Keep the total length under 200 words while ensuring substantive content. Focus on quality of connection over quantity of information. Balance confidence in personal abilities with humility and respect for the recipient's expertise and time.
+
+The tone should reflect Indian cultural values of respect for academic mentors while showcasing the student's preparation and serious intent. Demonstrate awareness of current research trends and social contexts relevant to Indian academic discourse.
+
+Generate the complete email body starting with the appropriate salutation, incorporating all provided context while maintaining authenticity and cultural sensitivity for the Indian academic environment.
